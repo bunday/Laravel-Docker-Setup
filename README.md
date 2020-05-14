@@ -29,4 +29,8 @@ eg `php artisan migrate`
 docker-compose exec php php /var/www/artisan migrate 
 ```
 
+## Resources that helped me do this
+<https://dev.to/aschmelyun/the-beauty-of-docker-for-local-laravel-development-13c0>
+
+
 Happy Coding 🎉
