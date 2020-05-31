@@ -9,6 +9,9 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 # I had to run this before i could use the pecl
 RUN apk add autoconf build-base
 
+# This is needed for mongo use of ssl 
+RUN apk add curl-dev openssl-dev
+
 # This install mongodb since it is not available through docker-php-ext-install. When you install through pecl, you need to enable the extension, hence the second command
 RUN pecl install mongodb && docker-php-ext-enable mongodb
 
