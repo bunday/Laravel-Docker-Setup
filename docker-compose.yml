@@ -37,6 +37,11 @@ services:
     mongo:
         container_name: mongo
         image: mongo
+        environment:
+            # provide your credentials here
+            MONGO_INITDB_ROOT_USERNAME: YOUR_PREFERRED_MONGO_USER
+            MONGO_INITDB_ROOT_PASSWORD: YOUR_PREFERRED_MONGO_USER_PASSWORD
+            MONGO_INITDB_DATABASE: YOUR_DATABASE_NAME
         ports:
             - "27017:27017" # Mongo Port
         networks: 
